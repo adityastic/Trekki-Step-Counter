@@ -15,6 +15,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
 import com.jjoe64.graphview.GraphView
 import com.jjoe64.graphview.series.DataPoint
 import com.jjoe64.graphview.series.LineGraphSeries
@@ -61,7 +62,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
         }
         rawData = LineGraphSeries()
         rawData!!.title = "Raw Data"
-        rawData!!.color = resources.getColor(R.color.colorAccent)
+        rawData!!.color = ContextCompat.getColor(this,R.color.colorAccent)
         lpData = LineGraphSeries()
         lpData!!.title = "Smooth Data"
         lpData!!.color = Color.BLUE
